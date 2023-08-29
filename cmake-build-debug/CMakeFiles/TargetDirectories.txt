@@ -1,0 +1,3 @@
+/Users/alessiotimofte/CLionProject/Notepad/cmake-build-debug/CMakeFiles/Notepad.dir
+/Users/alessiotimofte/CLionProject/Notepad/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alessiotimofte/CLionProject/Notepad/cmake-build-debug/CMakeFiles/rebuild_cache.dir
