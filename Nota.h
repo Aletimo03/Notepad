@@ -17,6 +17,7 @@ public:
     void setBody(const string &body);
     void setLock(const bool &locked);
 
+
 private:
     string title;
     string body;

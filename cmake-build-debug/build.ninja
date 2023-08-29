@@ -58,6 +58,12 @@ build CMakeFiles/Notepad.dir/Nota.cpp.o: CXX_COMPILER__Notepad_Debug /Users/ales
   OBJECT_DIR = CMakeFiles/Notepad.dir
   OBJECT_FILE_DIR = CMakeFiles/Notepad.dir
 
+build CMakeFiles/Notepad.dir/Collection.cpp.o: CXX_COMPILER__Notepad_Debug /Users/alessiotimofte/CLionProject/Notepad/Collection.cpp || cmake_object_order_depends_target_Notepad
+  DEP_FILE = CMakeFiles/Notepad.dir/Collection.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Notepad.dir
+  OBJECT_FILE_DIR = CMakeFiles/Notepad.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Notepad
@@ -66,7 +72,7 @@ build CMakeFiles/Notepad.dir/Nota.cpp.o: CXX_COMPILER__Notepad_Debug /Users/ales
 #############################################
 # Link the executable Notepad
 
-build Notepad: CXX_EXECUTABLE_LINKER__Notepad_Debug CMakeFiles/Notepad.dir/main.cpp.o CMakeFiles/Notepad.dir/Nota.cpp.o
+build Notepad: CXX_EXECUTABLE_LINKER__Notepad_Debug CMakeFiles/Notepad.dir/main.cpp.o CMakeFiles/Notepad.dir/Nota.cpp.o CMakeFiles/Notepad.dir/Collection.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6
   OBJECT_DIR = CMakeFiles/Notepad.dir
   POST_BUILD = :
