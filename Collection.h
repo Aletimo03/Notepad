@@ -5,16 +5,23 @@
 #ifndef NOTEPAD_COLLECTION_H
 #define NOTEPAD_COLLECTION_H
 #include "Nota.h"
+#include "Subject.h"
 #include <list>
 
 using namespace std;
 
-class Collection {
+
+
+class Collection : public Subject{
 public:
     explicit Collection(const string &name);
     void addNote(Nota &nota);
     void deleteNote(Nota &nota);
     void editNote(Nota &nota);
+
+    virtual void registerObserver(Observer* observer) override;
+    virtual void unregisterObserver(Observer* observer) override;
+    virtual void notifyObservers() override;
 
 
 private:

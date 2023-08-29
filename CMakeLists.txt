@@ -3,4 +3,4 @@ project(Notepad)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Notepad main.cpp Nota.h Nota.cpp Collection.h Collection.cpp)
+add_executable(Notepad main.cpp Nota.h Nota.cpp Collection.h Collection.cpp Observer.h Subject.h QuantityObserver.h QuantityObserver.cpp)

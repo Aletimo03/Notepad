@@ -4,6 +4,8 @@
 
 #include "Collection.h"
 
+
+
 Collection::Collection( const string &name) {
     this->name=name;
 }
