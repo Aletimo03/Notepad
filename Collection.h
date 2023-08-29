@@ -15,6 +15,9 @@ using namespace std;
 class Collection : public Subject{
 public:
     explicit Collection(const string &name);
+
+    string getName();
+    int getSize();
     void addNote(Nota &nota);
     void deleteNote(Nota &nota);
     void editNote(Nota &nota);
@@ -26,7 +29,8 @@ public:
 
 private:
     string name;
-list<Nota*> collection;
+    list<Nota*> collection;
+    list<Observer*> observers;
 };
 
 

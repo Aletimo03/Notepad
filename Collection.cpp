@@ -10,8 +10,17 @@ Collection::Collection( const string &name) {
     this->name=name;
 }
 
+string Collection::getName(){
+    return name;
+}
+
+int Collection::getSize(){
+    return collection.size();
+}
+
 void Collection::addNote( Nota &nota) {
     this->collection.push_back(&nota);
+    notifyObservers();
 }
 void Collection::deleteNote( Nota &nota) {
     auto it=collection.begin();
@@ -21,6 +30,7 @@ void Collection::deleteNote( Nota &nota) {
     }
     if(!(*it)->isLocked())
     collection.erase(std::find(collection.begin(),collection.end(),(*it)));
+    notifyObservers();
 }
 
 void Collection::editNote(Nota &nota) {
@@ -33,3 +43,17 @@ void Collection::editNote(Nota &nota) {
         (*it)->setBody(nota.getBody());
 }
 
+
+void Collection::registerObserver(Observer* observer) {
+            observers.push_back(observer);
+}
+
+void Collection::unregisterObserver(Observer* observer) {
+           observers.remove(observer);
+}
+
+void Collection::notifyObservers()  {
+       for(auto & observer : observers){
+                 observer->update();
+       }
+}
