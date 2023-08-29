@@ -22,9 +22,11 @@ bool Nota::isLocked() const{
 }
 
 void Nota::setTitle(const string &title){
+    if(!this->locked)
     this->title=title;
 }
 void Nota::setBody(const string &body) {
+    if(!this->locked)
     this->body=body;
 }
 void Nota::setLock(const bool &locked) {
