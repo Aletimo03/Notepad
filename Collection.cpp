@@ -10,11 +10,11 @@ Collection::Collection( const string &name) {
     this->name=name;
 }
 
-string Collection::getName(){
+string Collection::getName() const{
     return name;
 }
 
-int Collection::getSize(){
+int Collection::getSize() const{
     return collection.size();
 }
 

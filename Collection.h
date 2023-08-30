@@ -16,8 +16,8 @@ class Collection : public Subject{
 public:
     explicit Collection(const string &name);
 
-    string getName();
-    int getSize();
+    string getName() const;
+    int getSize() const;
     void addNote(Nota &nota);
     void deleteNote(Nota &nota);
     void editNote(Nota &nota);
