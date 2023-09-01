@@ -3,9 +3,9 @@
 //
 
 #include <gtest/gtest.h>
-#include "../Nota.h"  // Include the header file for your Nota class
+#include "../Nota.h"
 
-// Test fixture for Nota class
+// Tests for Nota class
 class NotaTest : public ::testing::Test {
 protected:
     NotaTest() {
