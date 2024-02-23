@@ -11,7 +11,11 @@ class QuantityObserverTest : public ::testing::Test {
 protected:
     // Create instances of the Collection and Nota classes for testing
     Collection collection;
-    Nota nota;
+    Nota nota1;
+    Nota nota2;
+    Nota nota3;
+    Nota nota4;
+    Nota nota5;
 
     // Create an instance of QuantityObserver
     QuantityObserver observer{&collection};
@@ -19,7 +23,11 @@ protected:
     // This function runs before each test case
     void SetUp() override {
         // Add a Note to the Collection
-        collection.addNote(nota);
+        collection.addNote(nota1);
+        collection.addNote(nota2);
+        collection.addNote(nota3);
+        collection.addNote(nota4);
+        collection.addNote(nota5);
     }
 };
 
@@ -37,5 +45,5 @@ TEST_F(QuantityObserverTest, UpdateMethod) {
     std::cout.rdbuf(oldOutput);
 
     // Check if the printed message matches the expected output
-    EXPECT_EQ(output.str(), "Numero totale note dentro la collezione : 1\n");
+    EXPECT_EQ(output.str(), "Numero totale note dentro la collezione : 5\n");
 }
