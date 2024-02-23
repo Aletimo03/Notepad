@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES  Nota.h Nota.cpp Collection.h Collection.cpp QuantityObserver.h QuantityObserver.cpp main.cpp )
 add_executable(Nota.h Nota.cpp Collection.h Collection.cpp QuantityObserver.h QuantityObserver.cpp main.cpp)
 # UNIT TESTING
-# add_subdirectory(test)
+ add_subdirectory(test)
