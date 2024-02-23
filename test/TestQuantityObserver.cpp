@@ -35,7 +35,7 @@ protected:
 TEST_F(QuantityObserverTest, UpdateMethod) {
     // Create a mock output stream to capture the printed message
     std::stringstream output;
-    std::streambuf* oldOutput = std::cout.rdbuf();
+    std::streambuf *oldOutput = std::cout.rdbuf();
     std::cout.rdbuf(output.rdbuf());
 
     // Notify the observer (should print the message)

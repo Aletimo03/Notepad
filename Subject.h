@@ -7,13 +7,15 @@
 
 #include "Observer.h"
 
-class Subject{
+class Subject {
 public:
-    virtual void registerObserver(Observer* observer)=0;
-    virtual void unregisterObserver(Observer* observer)=0;
-    virtual void notifyObservers()=0;
+    virtual void registerObserver(Observer *observer) = 0;
 
-    virtual ~Subject(){}
+    virtual void unregisterObserver(Observer *observer) = 0;
+
+    virtual void notifyObservers() = 0;
+
+    virtual ~Subject() {}
 };
 
 
