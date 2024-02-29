@@ -17,11 +17,6 @@ int Collection::getSize() const {
     return collection.size();
 }
 
-
-list<Nota *> Collection::getCollection() const {
-    return collection;
-}
-
 void Collection::addNote(Nota &nota) {
     this->collection.push_back(&nota);
     notifyObservers();
@@ -46,6 +41,17 @@ void Collection::editNote(Nota &nota) {
     }
     if (!(*it)->isLocked())
         (*it)->setBody(nota.getBody());
+}
+
+
+Nota Collection::getNota(string const &title) {
+
+    for (auto itr: collection) {
+        if ((*itr).getTitle() == title)
+            return (*itr); // finds the note
+    }
+    Nota A;
+    return A;
 }
 
 

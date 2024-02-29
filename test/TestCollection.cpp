@@ -73,5 +73,5 @@ TEST_F(CollectionTest, EditNote) {
 
     // Check if the body of the Note has been modified
     EXPECT_EQ(collection.getSize(), 1);
-    EXPECT_EQ(collection.getCollection().front()->getBody(), "Modified Note Body");
+    EXPECT_EQ(collection.getNota("Note Title").getBody(), "Modified Note Body");
 }

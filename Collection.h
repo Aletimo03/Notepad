@@ -22,13 +22,14 @@ public:
 
     int getSize() const;
 
-    list<Nota *> getCollection() const;
 
     void addNote(Nota &nota);
 
     void deleteNote(Nota &nota);
 
     void editNote(Nota &nota);
+
+    Nota getNota(string const &title);
 
     virtual void registerObserver(Observer *observer) override;
 
