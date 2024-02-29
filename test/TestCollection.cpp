@@ -75,3 +75,36 @@ TEST_F(CollectionTest, EditNote) {
     EXPECT_EQ(collection.getSize(), 1);
     EXPECT_EQ(collection.getNota("Note Title").getBody(), "Modified Note Body");
 }
+
+
+// Test case for getNota method
+TEST_F(CollectionTest, GetNota) {
+    Collection collection;
+    Nota nota1("titolo 1", "body 1");
+    Nota nota2("titolo 2", "body 2");
+    Nota nota3("titolo 3", "body 3");
+    collection.addNote(nota1);
+    collection.addNote(nota2);
+    collection.addNote(nota3);
+
+
+    Nota retrievedNota = collection.getNota(nota2.getTitle());
+    EXPECT_EQ(retrievedNota.getTitle(), nota2.getTitle());
+    EXPECT_EQ(retrievedNota.getBody(), nota2.getBody());
+}
+
+// Test case for getNota method when note is not found
+TEST_F(CollectionTest, GetNotaNotFound) {
+
+    Collection collection;
+    Nota nota1("titolo 1", "body 1");
+    Nota nota2("titolo 2", "body 2");
+    Nota nota3("titolo 3", "body 3");
+    collection.addNote(nota1);
+    collection.addNote(nota2);
+    collection.addNote(nota3);
+
+    Nota retrievedNota = collection.getNota("Nonexistent Title");
+    EXPECT_EQ(retrievedNota.getTitle(), "");
+    EXPECT_EQ(retrievedNota.getBody(), "");
+}
