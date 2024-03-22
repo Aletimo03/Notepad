@@ -5,9 +5,7 @@
 #include "Collection.h"
 
 
-Collection::Collection(const string &name) {
-    this->name = name;
-}
+Collection::Collection(const string &name): name(name) {}
 
 string Collection::getName() const {
     return name;
@@ -18,7 +16,7 @@ int Collection::getSize() const {
 }
 
 void Collection::addNote(Nota &nota) {
-    this->collection.push_back(&nota);
+    collection.push_back(&nota); // this non necessario
     notifyObservers();
 }
 

@@ -7,31 +7,31 @@
 
 Nota::Nota() { locked = false; }
 
-Nota::Nota(const string &title, const string &body) {
-    this->title = title;
-    this->body = body;
+Nota::Nota(const string &title, const string &body): title(title), body(body) {
     locked = false;
 }
 
+// rimossi this superflui
+
 string Nota::getTitle() const {
-    return this->title;
+    return title;
 }
 
 string Nota::getBody() const {
-    return this->body;
+    return body;
 }
 
 bool Nota::isLocked() const {
-    return this->locked;
+    return locked;
 }
 
 void Nota::setTitle(const string &title) {
-    if (!this->locked)
+    if (!locked)
         this->title = title;
 }
 
 void Nota::setBody(const string &body) {
-    if (!this->locked)
+    if (!locked)
         this->body = body;
 }
 

@@ -16,8 +16,6 @@ class Collection : public Subject {
 public:
     explicit Collection(const string &name);
 
-    Collection() {}
-
     string getName() const;
 
     int getSize() const;

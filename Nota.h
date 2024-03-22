@@ -11,7 +11,7 @@ using namespace std;
 
 class Nota {
 public:
-    Nota();
+    explicit Nota();
 
     Nota(const string &title, const string &body);
 

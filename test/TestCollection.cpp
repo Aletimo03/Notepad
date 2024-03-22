@@ -4,6 +4,7 @@
 
 #include <gtest/gtest.h>
 #include "../Collection.h"
+#include "../Nota.h"
 
 class CollectionTest : public ::testing::Test {
 protected:
@@ -79,7 +80,7 @@ TEST_F(CollectionTest, EditNote) {
 
 // Test case for getNota method
 TEST_F(CollectionTest, GetNota) {
-    Collection collection;
+    Collection collection("Sample Collection");
     Nota nota1("titolo 1", "body 1");
     Nota nota2("titolo 2", "body 2");
     Nota nota3("titolo 3", "body 3");
@@ -96,7 +97,7 @@ TEST_F(CollectionTest, GetNota) {
 // Test case for getNota method when note is not found
 TEST_F(CollectionTest, GetNotaNotFound) {
 
-    Collection collection;
+    Collection collection("Sample Collection");
     Nota nota1("titolo 1", "body 1");
     Nota nota2("titolo 2", "body 2");
     Nota nota3("titolo 3", "body 3");
